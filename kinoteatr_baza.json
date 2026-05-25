@@ -1,0 +1,33 @@
+{
+  "filmlar_royxati": {
+    "Alpomish": {
+      "janr": "Tarixiy",
+      "yosh_cheklovi": "12+",
+      "davomiyligi_daqiqa": 140
+    }
+  },
+  "seanslar_va_zallar": {
+    "Alpomish": {
+      "vaqt_turi": "Kechki",
+      "zal_xaritasi": [
+        [1, 0, 0, 0, 0],
+        [0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 0]
+      ],
+      "joy_turlari": {
+        "1-qator": "Oddiy",
+        "2-qator": "Oddiy",
+        "3-qator": "VIP"
+      }
+    }
+  },
+  "sotilgan_chiptalar": [
+    {
+      "chipta_id": 44012,
+      "film": "Alpomish",
+      "joy": {"qator": 1, "o'rindiq": 1},
+      "sotilgan_narx": 45000.0,
+      "xaridor": "Humoyun Asadov"
+    }
+  ]
+}
