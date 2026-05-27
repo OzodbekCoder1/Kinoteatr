@@ -1,6 +1,6 @@
 import json
 
-def yangi_film_qo_shish(nomi, janri, cheklov, **qoshimcha):
+def yangi_film_qoshish(nomi, janri, cheklov, daqida):
     try:
         with open("kinoteatr_baza.json", "r") as fayl:
             baza = json.load(fayl)
@@ -14,7 +14,7 @@ def yangi_film_qo_shish(nomi, janri, cheklov, **qoshimcha):
     baza["filmlar_ro_yxati"][nomi] = {
         "janr": janri,
         "yosh_cheklovi": cheklov,
-        "qoshimcha": qoshimcha
+        "davomiyligi_daqiqa": daqida
     }
     
     yangi_seans = f"{nomi}"
