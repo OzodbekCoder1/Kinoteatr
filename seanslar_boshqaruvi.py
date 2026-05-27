@@ -5,21 +5,25 @@ def yangi_film_qoshish(nomi, janri, cheklov, daqida):
         with open("kinoteatr_baza.json", "r") as fayl:
             baza = json.load(fayl)
     except:
-        baza = {"filmlar_ro_yxati": {}, "seanslar_va_zallar": {}, "sotilgan_chiptalar": []}
+        baza = {"filmlar_royxati": {}, "seanslar_va_zallar": {}, "sotilgan_chiptalar": []}
 
     ruxsat_etilganglar = frozenset({"0+", "6+", "12+", "16+", "18+"})
     if cheklov not in ruxsat_etilganglar:
         return False
 
-    baza["filmlar_ro_yxati"][nomi] = {
+    baza["filmlar_royxati"][nomi] = {
         "janr": janri,
         "yosh_cheklovi": cheklov,
         "davomiyligi_daqiqa": daqida
     }
-    
+    vaqt_turlari = ["Ertalabki", "Kunduzgi", "Kechki"]
+    vaqt = input("Vaqtini kiriting: ")
+    if vaqt not in vaqt_turlari:
+        return False
+        
     yangi_seans = f"{nomi}"
     baza["seanslar_va_zallar"][yangi_seans] = {
-        "vaqt_turi": "Kechki",
+        "vaqt_turi": vaqt,
         "zal_xaritasi": [
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
