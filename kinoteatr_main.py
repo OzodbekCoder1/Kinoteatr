@@ -1,5 +1,4 @@
-import tizim_audit
-
+from tizim_audit import json_ochish
 
 def menyu_korsatish():
     print("1. Mavjud filmlar va seanslarni ko'rish")
@@ -17,11 +16,17 @@ def asosiy_dastur_sikli():
             tanlov = int(tanlov)
             match tanlov:
                 case 1:
-                    kinolar = tizim_audit.json_ochish()
+                    kinolar = json_ochish()
                     for kino, info in kinolar['filmlar_royxati'].items():
-                        print(f"Nomi: {kino} \n Janr: {info['janr']} \n Yosh cheklovi: {info["yosh_cheklovi"]} \n Davomiyligi: {info['davomiyligi_daqiqa']}")
+                        print(f"Nomi: {kino} \n Janr: {info['janr']} \n Yosh cheklovi: {info['yosh_cheklovi']} \n Davomiyligi: {info['davomiyligi_daqiqa']}")
                 case 2:
                     pass
-
+                case 3:
+                    pass
+                case 4:
+                    pass
+                case 5:
+                    print("Dastur toxtadi")
+                    break
         except:
             print("Faqat raqam kiriting")
